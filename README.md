@@ -10,6 +10,7 @@
  change address of config.js file.
   nftMarket deployed to: => nftmarketaddress
   nft deployed to: => nftaddress
+6.$ yarn dev
 
 Enjoy coding.
 
