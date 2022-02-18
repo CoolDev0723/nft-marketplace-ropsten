@@ -10,11 +10,11 @@ import {
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/Market.sol/NFTMarket.json'
 
-let rpcEndpoint = null
+let rpcEndpoint = "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161";
 
-if (process.env.NEXT_PUBLIC_WORKSPACE_URL) {
-  rpcEndpoint = process.env.NEXT_PUBLIC_WORKSPACE_URL
-}
+// if (process.env.NEXT_PUBLIC_WORKSPACE_URL) {
+//   rpcEndpoint = process.env.NEXT_PUBLIC_WORKSPACE_URL
+// }
 
 export default function Home() {
   const [nfts, setNfts] = useState([])
