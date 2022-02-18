@@ -1,1 +1,1 @@
-# Hardhat_Metaverse_Marketplace_Ropsten
+# Full stack NFT marketplace built with Ropsten, Solidity, IPFS, & Next.js
