@@ -1,19 +1,82 @@
-# Full stack NFT marketplace built with Ropsten, Solidity, IPFS, & Next.js
+## Full stack NFT marketplace built with Ropsten, Solidity, IPFS, & Next.js
+https://nftmarketplaceropsten.tommigel.repl.co
 
-1.Download this repository.(This project is final source code. Please use it as a source reference.)
-2.$ npm install
-3.set hardhat.config.js
- Set privateKey in hardhat.config.js file (This is your private key of ropsten network address.)
- Set networks -> ropsten ->url (This is your ropsten network project link.)
-4.$ npx hardhat compile
-5.$ npx hardhat run scripts/deploy.js --network ropsten
- change address of config.js file.
-  nftMarket deployed to: => nftmarketaddress
-  nft deployed to: => nftaddress
-6.$ yarn dev
+#### Local setup
 
-Enjoy coding.
+To run this project locally, follow these steps.
 
-            
-            
-  
+1. Clone the project locally, change into the directory, and install the dependencies:
+
+```sh
+git clone https://github.com/MigelTom/nft-marketplace-ropsten.git
+
+cd nft-marketplace-ropsten
+
+# install using NPM or Yarn
+npm install
+
+# or
+
+yarn
+```
+
+2. Start the local Hardhat node
+
+```sh
+npx hardhat node
+```
+
+3. With the network running, deploy the contracts to the local network in a separate terminal window
+
+```sh
+npx hardhat run scripts/deploy.js --network ropsten
+```
+It's created config.js
+```sh
+  export const nftmarketaddress = "${nftMarket.address}"
+  export const nftaddress = "${nft.address}"
+  export const rpcEndpoint = "https://ropsten.infura.io/v3/${infuraId}"
+```
+
+4. Start the app
+
+```
+npm run dev
+```
+
+### Configuration
+
+To deploy to Ropsten test networks, update the configurations located in __hardhat.config.js__ to use a private key and, optionally, deploy to a private RPC like Infura.
+URL: 
+```javascript
+require("@nomiclabs/hardhat-waffle");
+const fs = require('fs');
+const privateKey = fs.readFileSync(".secret").toString().trim() || "01234567890123456789";
+
+// infuraId is optional if you are using Infura RPC
+const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
+
+module.exports = {
+  solidity: {
+    version: "0.8.4",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
+  networks: {
+    hardhat:{
+      chainId:1337
+    },
+    ropsten: {
+      url: `https://ropsten.infura.io/v3/${infuraId}`, 
+      accounts: [`0x${privateKey}`]
+    }
+  }
+};
+```
+
+If using Infura, update __.infuraid__ with your [Infura](https://infura.io/) project ID.
+
