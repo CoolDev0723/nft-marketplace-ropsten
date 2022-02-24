@@ -8,9 +8,9 @@ To run this project locally, follow these steps.
 1. Clone the project locally, change into the directory, and install the dependencies:
 
 ```sh
-git clone https://github.com/jaylee923/nft_marketplace3_nextjs.git
+git clone https://github.com/MigelTom/nft-marketplace.git
 
-cd nft_marketplace3_nextjs
+cd nft-marketplace
 
 # install using NPM or Yarn
 npm install
