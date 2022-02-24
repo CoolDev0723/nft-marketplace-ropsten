@@ -1,5 +1,5 @@
 ## Full stack NFT marketplace built with Ropsten, Solidity, IPFS, & Next.js
-https://fullstacknftmarketplace.tommigel.repl.co/
+https://nftmarketplaceropsten.tommigel.repl.co
 
 #### Local setup
 
@@ -8,7 +8,7 @@ To run this project locally, follow these steps.
 1. Clone the project locally, change into the directory, and install the dependencies:
 
 ```sh
-git clone https://github.com/MigelTom/nft-marketplace.git
+git clone https://github.com/MigelTom/nft-marketplace-ropsten.git
 
 cd nft-marketplace
 
