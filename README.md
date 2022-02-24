@@ -10,7 +10,7 @@ To run this project locally, follow these steps.
 ```sh
 git clone https://github.com/MigelTom/nft-marketplace-ropsten.git
 
-cd nft-marketplace
+cd nft-marketplace-ropsten
 
 # install using NPM or Yarn
 npm install
