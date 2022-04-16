@@ -7,8 +7,8 @@ import {
   nftaddress, nftmarketaddress, rpcEndpoint
 } from '../config'
 
-import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
-import Market from '../artifacts/contracts/Market.sol/NFTMarket.json'
+import NFT from './NFT.json'
+import Market from './NFTMarket.json'
 
 export default function Home() {
   const [nfts, setNfts] = useState([])
